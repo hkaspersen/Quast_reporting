@@ -11,6 +11,9 @@ source("functions.R")
 
 report_loc <- args[1]
 output_dir <- args[2]
+libpath <- args[3]
+
+.libPaths(c(libpath,.libPaths()))
 
 check_dir(output_dir)
 output_dir <- paste0(output_dir, "/results_", Sys.Date())
