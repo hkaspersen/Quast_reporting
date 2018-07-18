@@ -100,35 +100,35 @@ create_plots <- function(df) {
          fill = "Number of Contigs")+
     theme(legend.position = "bottom")
   
-  ggsave(paste0(output_dir,"/assembly_contigs.tiff"),
+  ggsave(paste0(output_dir,"/assembly_contigs.svg"),
          p1,
          dpi = 100,
          units = "cm",
-         device = "tiff",
+         device = "svg",
          height = 20,
          width = 25)
   
-  ggsave(paste0(output_dir,"/assembly_misassemblies.tiff"),
+  ggsave(paste0(output_dir,"/assembly_misassemblies.svg"),
          p2,
          dpi = 100,
          units = "cm",
-         device = "tiff",
+         device = "svg",
          height = 20,
          width = 25)
   
-  ggsave(paste0(output_dir,"/assembly_Ns.tiff"),
+  ggsave(paste0(output_dir,"/assembly_Ns.svg"),
          p3,
          dpi = 100,
          units = "cm",
-         device = "tiff",
+         device = "svg",
          height = 20,
          width = 25)
   
-  ggsave(paste0(output_dir,"/N50_largest_contigs.tiff"),
+  ggsave(paste0(output_dir,"/N50_largest_contigs.svg"),
          p4,
          dpi = 100,
          units = "cm",
-         device = "tiff",
+         device = "svg",
          height = 20,
          width = 25)
 }
@@ -155,27 +155,27 @@ create_boxplots <- function(df) {
     theme(axis.title.x = element_blank(),
           axis.text.x = element_text(angle = 45, hjust = 1))
   
-  ggsave(paste0(output_dir,"/no_of_contigs_per_size.tiff"),
+  ggsave(paste0(output_dir,"/no_of_contigs_per_size.svg"),
          p1,
          dpi = 100,
          units = "cm",
-         device = "tiff",
+         device = "svg",
          height = 20,
          width = 25)
   
-  ggsave(paste0(output_dir,"/assembly_contig_sizes.tiff"),
+  ggsave(paste0(output_dir,"/assembly_contig_sizes.svg"),
          p2,
          dpi = 100,
          units = "cm",
-         device = "tiff",
+         device = "svg",
          height = 20,
          width = 25)
   
-  ggsave(paste0(output_dir,"/N50_NG50.tiff"),
+  ggsave(paste0(output_dir,"/N50_NG50.svg"),
          p3,
          dpi = 100,
          units = "cm",
-         device = "tiff",
+         device = "svg",
          height = 20,
          width = 25)
 }

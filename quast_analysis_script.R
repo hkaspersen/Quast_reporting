@@ -1,14 +1,19 @@
-library(tidyverse)
+#!/usr/bin/env Rscript
+args <- commandArgs(trailingOnly = TRUE)
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(svglite)
 library(openxlsx)
 
 source("functions.R")
 
-report_loc <- readline(prompt = "Please supply location of transposed_report.tsv (use '/' instead of '\'): ")
-output_dir <- readline(prompt = "Please supply output location: ")
+report_loc <- args[1]
+output_dir <- args[2]
 
 check_dir(output_dir)
 output_dir <- paste0(output_dir, "/results_", Sys.Date())
-
 
 raw_report <- read.delim(paste0(report_loc,
                                 "/transposed_report.tsv"),
