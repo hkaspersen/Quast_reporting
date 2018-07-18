@@ -3,3 +3,6 @@
 .Rproj.user
 .Rdata
 .Rhistory
+*.tiff
+test.R
+*/
