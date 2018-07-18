@@ -11,7 +11,6 @@ library(dplyr, lib.loc = libpath)
 library(ggplot2, lib.loc = libpath)
 library(tidyr, lib.loc = libpath)
 library(svglite, lib.loc = libpath)
-library(openxlsx, lib.loc = libpath)
 
 # Functions
 check_dir <- function(output_dir) {
@@ -213,7 +212,11 @@ save_data <- function(df) {
            "N per 100 kbp" = N_per_100kbp,
            "Largest alignment" = Largest.alignment)
   
-  write.xlsx(df, paste0(output_dir, "/selected_results.xlsx"))
+  write.table(df,
+              paste0(output_dir,
+                     "/selected_results.txt"),
+              sep = "\t",
+              row.names = F)
 }
 
 # Run functions
@@ -221,8 +224,7 @@ check_dir(output_dir)
 
 output_dir <- paste0(output_dir, "/results_", Sys.Date())
 
-raw_report <- read.delim(paste0(report_loc,
-                                "/transposed_report.tsv"),
+raw_report <- read.delim(report_loc,
                          sep = "\t",
                          header = TRUE,
                          stringsAsFactors = F)
