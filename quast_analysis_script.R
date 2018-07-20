@@ -3,14 +3,11 @@ args <- commandArgs(trailingOnly = TRUE)
 
 report_loc <- args[1]
 output_dir <- args[2]
-libpath <- args[3]
 
-.libPaths(c(libpath,.libPaths()))
-
-library(dplyr, lib.loc = libpath)
-library(ggplot2, lib.loc = libpath)
-library(tidyr, lib.loc = libpath)
-library(svglite, lib.loc = libpath)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(svglite)
 
 # Functions
 check_dir <- function(output_dir) {
