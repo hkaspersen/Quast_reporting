@@ -1,4 +1,4 @@
-# Quast_reporting
+# Information
 R Script for reporting quast results on assemblies. The script utilizes 
 the transposed_report.tsv file from quast to generate a few informative 
 figures and an excel table with selected information.
