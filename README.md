@@ -20,7 +20,4 @@ tidyr
 svglite
 
 # Usage: 
-Rscript quast_analysis_script.R transposed_report.tsv output_dir libpath
-
-libpath is the path to the library with extra packages not installed in
-the default library location on the HPC cluster.
+Rscript quast_analysis_script.R transposed_report.tsv output_dir
