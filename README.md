@@ -5,14 +5,18 @@ figures and an excel table with selected information.
 The script creates a new folder called "results_DATE" in the specified 
 directory.
 
-The functions file is not needed as the functions have ben moved inside 
+The functions file is not needed as the functions have been moved inside 
 the quast_analysis_script.R.
 
 # Dependencies
 The script relies on the following packages being installed:
+
 dplyr
+
 ggplot2
-tiyr
+
+tidyr
+
 svglite
 
 # Usage: 
