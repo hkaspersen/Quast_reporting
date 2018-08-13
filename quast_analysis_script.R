@@ -222,7 +222,7 @@ save_data <- function(df) {
 # Run functions
 check_dir(output_dir)
 
-output_dir <- paste0(output_dir, "/multiQuast_results_", Sys.Date())
+output_dir <- paste0(output_dir, "/results_", Sys.Date())
 
 raw_report <- read.delim(report_loc,
                          sep = "\t",
