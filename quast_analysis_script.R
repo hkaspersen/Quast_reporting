@@ -145,6 +145,7 @@ create_plots <- function(df) {
 
 create_boxplots <- function(df) {
   p1 <- ggplot(df, aes(key_contig, value_contig))+
+    stat_boxplot(geom = "errorbar", width = 0.6)+
     geom_boxplot()+
     theme_classic()+
     labs(y = "# of contigs")+
@@ -152,6 +153,7 @@ create_boxplots <- function(df) {
           axis.text.x = element_text(angle = 45, hjust = 1))
   
   p2 <- ggplot(df, aes(key_total, value_total))+
+    stat_boxplot(geom = "errorbar", width = 0.6)+
     geom_boxplot()+
     theme_classic()+
     labs(y = "Total size of contigs")+
@@ -159,6 +161,7 @@ create_boxplots <- function(df) {
           axis.text.x = element_text(angle = 45, hjust = 1))
   
   p3 <- ggplot(df, aes(key_ng, value_ng))+
+    stat_boxplot(geom = "errorbar", width = 0.6)+
     geom_boxplot()+
     theme_classic()+
     labs(y = "# of contigs")+
