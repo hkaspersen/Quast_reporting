@@ -5,9 +5,6 @@ figures and an excel table with selected information.
 The script creates a new folder called "results_DATE" in the specified 
 directory.
 
-The functions file is not needed as the functions have been moved inside 
-the quast_analysis_script.R.
-
 # Dependencies
 The script relies on the following packages being installed:
 
@@ -18,6 +15,8 @@ ggplot2
 tidyr
 
 svglite
+
+R.utils
 
 # Usage: 
 Rscript quast_analysis_script.R transposed_report.tsv output_dir
