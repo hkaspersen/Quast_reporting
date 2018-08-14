@@ -5,4 +5,5 @@
 .Rhistory
 *.tiff
 test.R
-*/
+data/
+output/
